@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AppHeader from './Components/AppHeader';
+import ContactList from './Components/ContactList'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// stateless functional component
+/*
+export default function App() {
+    return (
+      <div>
+        <AppHeader />
+        <main className="ui main text container" 
+        style={{
+            marginTop: "5em",
+        }}>
+          <ContactsList />
+        </main>
+      </div>
+    );
+  }
+*/
+
+//class component
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <AppHeader />
+        <main className="ui main text container" 
+        style={{
+            marginTop: "5em",
+        }}>
+          <ContactList />
+        </main>
+      </div>
+    );
+  }
 }
-
-export default App;
